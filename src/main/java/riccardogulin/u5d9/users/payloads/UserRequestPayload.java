@@ -1,4 +1,4 @@
-package riccardogulin.u5d9.users;
+package riccardogulin.u5d9.users.payloads;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

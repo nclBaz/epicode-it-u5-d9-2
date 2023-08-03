@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import riccardogulin.u5d9.exceptions.BadRequestException;
 import riccardogulin.u5d9.exceptions.NotFoundException;
+import riccardogulin.u5d9.users.payloads.UserRequestPayload;
 
 @Service
 public class UsersService {
@@ -52,5 +53,10 @@ public class UsersService {
 	public void findByIdAndDelete(UUID id) throws NotFoundException {
 		User found = this.findById(id);
 		usersRepo.delete(found);
+	}
+
+	public User findByEmail(String email) {
+		return usersRepo.findByEmail(email)
+				.orElseThrow(() -> new NotFoundException("Utente con email " + email + " non trovato"));
 	}
 }

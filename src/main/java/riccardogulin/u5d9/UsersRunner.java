@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 
 import com.github.javafaker.Faker;
 
-import riccardogulin.u5d9.users.UserRequestPayload;
 import riccardogulin.u5d9.users.UsersService;
+import riccardogulin.u5d9.users.payloads.UserRequestPayload;
 
 @Component
 public class UsersRunner implements CommandLineRunner {

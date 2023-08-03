@@ -19,6 +19,12 @@ public class ExceptionsHandler {
 		return new ErrorsPayload(e.getMessage(), new Date(), 13212);
 	}
 
+	@ExceptionHandler(UnauthorizedException.class)
+	@ResponseStatus(HttpStatus.UNAUTHORIZED)
+	public ErrorsPayload handleUnauthorized(UnauthorizedException e) {
+		return new ErrorsPayload(e.getMessage(), new Date(), 21323);
+	}
+
 	@ExceptionHandler(NotFoundException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	public ErrorsPayload handleNotFound(NotFoundException e) {

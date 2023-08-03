@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import riccardogulin.u5d9.users.payloads.UserRequestPayload;
+
 @RestController
 @RequestMapping("/users")
 public class UsersController {
